@@ -18,4 +18,8 @@ class TestInteger < Test::Unit::TestCase
         assert_equal(5,IntegerQuiz.new.prime_num(12))
     end
     
+    def test_sum_d
+        assert_equal(18,IntegerQuiz.new.sum_d(10))
+    end
+    
 end

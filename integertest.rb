@@ -55,7 +55,8 @@ class IntegerQuiz
     return primes.length
   end
   
-  def sum_d
+  def sum_d(n)
+    (1..n).select{|divide| n % divide == 0}.sum
   end
   
 end
