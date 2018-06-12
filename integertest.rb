@@ -35,7 +35,25 @@ class IntegerQuiz
       # b와 r의 최대공약수와 같다. 
       return gcd(m, n%m)
     end
-    
+  end
+  
+  require 'prime'
+  def prime_num(n)
+    #Prime.each(n).count
+    primes = (2..n).to_a
+    # primes = [2,,5,6,7,8,9,10]
+    (2..n).each do |num|
+      (2...num).each do |divide|
+        if(num%divide == 0) && divide != num
+          primes.delete(num)
+          break
+        end
+      end
+    end
+    return primes.length
+  end
+  
+  def sum_d
   end
   
 end
