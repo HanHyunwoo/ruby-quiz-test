@@ -43,7 +43,9 @@ class IntegerQuiz
     primes = (2..n).to_a
     # primes = [2,,5,6,7,8,9,10]
     (2..n).each do |num|
-      (2...num).each do |divide|
+      # (2...num).each do |divide|
+      (2..num).each do |divide|
+        # if(num%divide == 0)
         if(num%divide == 0) && divide != num
           primes.delete(num)
           break
